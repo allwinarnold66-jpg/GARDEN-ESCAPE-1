@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+body, html, #root { margin: 0; padding: 0; height: 100%; background: #0b1512; color: #e8f5e9; font-family: 'Segoe UI', sans-serif; }
+
+.center { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; padding: 20px; }
+.card { background: #122018; padding: 32px; border-radius: 16px; max-width: 480px; width: 100%; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+
+input { padding: 10px; border-radius: 8px; border: 1px solid #2f6b2f; background: #0e1b14; color: white; font-size: 16px; width: 100%; margin: 8px 0; }
+button { cursor: pointer; border-radius: 8px; border: 2px solid #2f6b2f; background: #15291e; color: #e8f5e9; padding: 10px 16px; margin: 4px; font-size: 14px; }
+button:hover:not(:disabled) { background: #1f3b2a; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.primary { background: #2f6b2f; font-weight: bold; }
+button.link { background: transparent; border: none; text-decoration: underline; }
+button.selected { background: #3b82f6; }
+
+.error { color: #f87171; }
+.warn { color: #fbbf24; }
+
+.role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.status-list { list-style: none; padding: 0; text-align: left; }
+
+.fullscreen { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+.overlay-top { position: absolute; top: 0; left: 0; right: 0; text-align: center; padding: 20px; pointer-events: none; text-shadow: 0 2px 6px black; }
+
+.dashboard { position: absolute; top: 10px; right: 10px; width: 320px; background: rgba(10,20,15,0.85); padding: 14px; border-radius: 12px; }
+.dash-row { display: flex; flex-direction: column; border-bottom: 1px solid #2f6b2f; padding: 8px 0; }
+
+.hud-top { position: absolute; top: 10px; left: 10px; background: rgba(10,20,15,0.8); padding: 10px 14px; border-radius: 10px; display: flex; gap: 16px; align-items: center; }
+
+.panel { position: absolute; bottom: 10px; left: 10px; right: 10px; max-width: 700px; margin: 0 auto; background: rgba(10,20,15,0.92); padding: 16px; border-radius: 14px; }
+.question-card .options { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.question-card .options button { text-align: left; }
+.hint { font-style: italic; opacity: 0.8; }
+
+.info-box { text-align: center; }
+.info-box.success { color: #4ade80; }
+.info-box.error { color: #f87171; }
+
+.direction-pad { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 10px; }
+.direction-pad .row { display: flex; gap: 10px; }
+.direction-pad button { font-size: 18px; padding: 14px 20px; }
+
+.teammate-status { margin-top: 10px; font-size: 12px; opacity: 0.8; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
